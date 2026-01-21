@@ -18,6 +18,7 @@ defineProps({
       <h1 class="hero-name">{{ profile.name }}</h1>
       <p class="hero-title">{{ profile.title }}</p>
       <p class="hero-tagline">{{ profile.tagline }}</p>
+      <a class="hero-email" :href="`mailto:${profile.email}`">{{ profile.email }}</a>
     </div>
     <div class="hero-accent" aria-hidden="true">
       <div class="hero-accent-inner"></div>

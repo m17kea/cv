@@ -108,6 +108,17 @@ body {
   font-size: 1.02rem;
 }
 
+.hero-email {
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.hero-email:hover {
+  text-decoration: underline;
+}
+
 .hero-accent {
   width: 120px;
   display: flex;
