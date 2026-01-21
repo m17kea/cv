@@ -32,6 +32,10 @@ defineProps({
       <p v-if="role.impact" class="experience-impact">{{ role.impact }}</p>
     </div>
 
+    <ul v-if="role.highlights" class="bullet-list">
+      <li v-for="(item, index) in role.highlights" :key="index">{{ item }}</li>
+    </ul>
+
     <div v-if="role.projects" class="experience-projects">
       <ProjectBlock
         v-for="(project, index) in role.projects"

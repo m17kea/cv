@@ -1,8 +1,8 @@
 export const about = {
   title: 'About',
   paragraphs: [
-    'I have been mad about computers since I played around with DOS on my first Amstrad. I build them, program them and am fascinated by them.',
-    'My biggest regret was listening to my dad in 2001 when I announced my intention to study Computer Science and being told the dot com crash had ended the industry. I was that naive 18 year old. Luckily the force was too strong and after completing a very complicated Maths degree, it was my computer skills that shone and led me to become the engineer I am today.',
-    'I started my career doing data entry and decided I could automate my job, so I did. Far from losing my job I became the most in-demand employee in the department. I have taken that spirit with me through my entire career and have been rewarded with success and the praise of my peers.',
+    'I build products by turning messy problems into systems that scale, pairing technical rigor with clear product intent.',
+    'As a CTO, I rebuilt platforms and workflows to deliver reliable, secure, and cost-effective outcomes for both teams and clients. Early priorities were often chaotic and ambiguous, and I learned to deliver across shifting demands while operating largely single-handed.',
+    'I want to evolve Codex into a context-aware AI team that learns how people think and helps them move faster with confidence.',
   ],
 }
