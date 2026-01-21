@@ -21,6 +21,10 @@ defineProps({
       <a v-if="profile.email" class="hero-email" :href="`mailto:${profile.email}`">
         {{ profile.email }}
       </a>
+      <a v-if="profile.phone" class="hero-contact" :href="`tel:${profile.phone}`">
+        {{ profile.phone }}
+      </a>
+      <p v-if="profile.address" class="hero-contact">{{ profile.address }}</p>
     </div>
     <div v-if="profile.photo" class="hero-photo-frame">
       <img class="hero-photo" :src="profile.photo" :alt="`Headshot of ${profile.name}`" />
