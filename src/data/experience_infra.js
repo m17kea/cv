@@ -7,12 +7,12 @@ export const experience = [
     overview:
       'Joined when Derivitec was a two-person startup led by mathematicians, with an unstable product and a manually deployed public EC2 instance. Built the engineering function, shaped the product roadmap with stakeholders, and transformed the platform into a secure, automated, and scalable AWS architecture for near real-time risk and portfolio management.',
     achievementsIntro:
-      'As CTO, I led a zero-to-one platform rebuild, established modern engineering practices, and delivered measurable gains in scale and reliability, dramatically reducing risk calculation time while keeping cloud spend controlled through platform modernization and Codex-driven optimization.',
+      'As CTO, I led a zero-to-one platform rebuild, established modern engineering practices, and delivered measurable gains in scale and reliability, reducing risk calculation time dramatically while keeping cloud spend controlled through platform modernization and Codex-driven optimization.',
     achievements: [
       {
         label: 'Secure cloud foundation',
         detail:
-          'Replaced ad-hoc deployments with infrastructure-as-code, applied AWS Well-Architected security and reliability pillars, and introduced automated, repeatable environments.',
+          'Replaced ad-hoc deployments with infrastructure-as-code, implemented AWS Well-Architected security and reliability pillars, and introduced automated, repeatable environments.',
       },
       {
         label: 'Developer workflows',
@@ -32,7 +32,7 @@ export const experience = [
       {
         label: 'Reliable test environments',
         detail:
-          'Automated test environments from production backups with anonymized identifiers to enable safe, repeatable releases.',
+          'Automated test environments from production backups with anonymization (client identifiers replaced with code names) to enable safe, repeatable releases.',
       },
       {
         label: 'Reporting and analytics',
@@ -76,10 +76,9 @@ export const experience = [
     overview:
       'Verisk Specialty Business Solutions (formerly Sequel Business Solutions) has been a leading industry software specialist for over 25 years, delivering impactful, reliable solutions that provide end-to-end management of insurance and reinsurance operations.',
     highlights: [
-      'Aligned product owners and engineering on a Claims reliability roadmap, improving stability and release confidence.',
-      'Partnered with stakeholders to translate customer feedback into stabilization priorities and release criteria.',
-      'Implemented automated regression coverage to shorten feedback cycles and reduce escaped defects.',
-      'Standardized release workflows to improve predictability and cross-team coordination.',
+      'Rebuilt developer workflows across source control, CI/CD, and automated deployments using infrastructure-as-code.',
+      'Implemented automated and parallel testing with Selenium regression coverage to accelerate feedback cycles.',
+      'Stabilized the Claims product through agile delivery practices, quality gates, and tighter product ownership.',
     ],
   },
   {
@@ -90,11 +89,11 @@ export const experience = [
     overview:
       'BRT is a multi-award-winning provider of business process outsourcing and bespoke software solutions for wealth managers, independent asset managers, funds, private banks, and trust companies.',
     highlights: [
-      'Productized the Stanhope-built platform post-acquisition and rolled it out to BRT clients.',
-      'Delivered a unified data and reporting platform to improve client visibility and accuracy.',
-      'Designed multi-source data ingestion and normalization to support consistent portfolio reporting.',
-      'Automated operational workflows to reduce manual handoffs and errors.',
-      'Shipped a client-facing portal with shared identity, incorporating user feedback to improve onboarding and self-service.',
+      'Implemented a modern delivery stack for planning, source control, and CI/CD.',
+      'Engineered automated ingestion and translation of multi-source custodian data.',
+      'Engineered core data platforms for fund dealing and client reporting.',
+      'Automated operational workflows with task orchestration and legacy system sync.',
+      'Delivered shared identity services and a client-facing reporting portal.',
     ],
   },
   {
@@ -105,11 +104,11 @@ export const experience = [
     overview:
       'Stanhope Capital is a global investment office providing investment management and advisory services to private clients, charities and endowments. Based in London, Geneva, and Jersey, Stanhope is now one of the largest private investment offices in Europe, overseeing 9.5bn+ in assets.',
     highlights: [
-      'Implemented APX portfolio management to improve investment operations and reporting.',
-      'Built client reporting and MIS views to surface performance insights.',
-      'Delivered reconciliation and transaction loaders to reduce operational exceptions.',
-      'Integrated Bloomberg pricing to improve data accuracy and timeliness.',
-      'Developed a bespoke OMS to align trade workflows with firm processes.',
+      'Implemented APX portfolio management system.',
+      'Engineered client reporting and MIS views.',
+      'Engineered reconciliation and transaction loaders.',
+      'Engineered Bloomberg price feed integration.',
+      'Engineered bespoke OMS platform.',
     ],
   },
   {
@@ -120,9 +119,9 @@ export const experience = [
     overview:
       'BlueCrest Capital Management Limited (BCML) is an alternative asset management business based in Jersey, managing significant institutional assets across a number of diversified strategies.',
     highlights: [
-      'Automated reconciliation and fee workflows to reduce operational risk.',
-      'Automated futures and options expiry processing to ensure timely settlement.',
-      'Built electronic blotter and broker confirmation tooling to improve transparency.',
+      'Automated futures reconciliation and broker fee workflows.',
+      'Automated futures and options expiry workflows.',
+      'Engineered electronic blotter and broker confirmation tooling.',
     ],
   },
   {
@@ -131,10 +130,7 @@ export const experience = [
     title: 'Data Analyst',
     dateRange: 'January 2005 - July 2006',
     overview:
-      'J.P. Morgan Asset Management is a leading asset manager for individuals, advisors, and institutions. It is one of the largest asset and wealth managers in the world, with $1.7T in assets under management.',
-    highlights: [
-      'Automated static data intake to improve data quality and turnaround time.',
-      'Automated futures reconciliation to reduce breaks and manual effort.',
-    ],
+      'J.P. Morgan Asset Management is a leading asset manager for individuals, advisors and institutions. It is one of the largest asset and wealth managers in the world, with $1.7T in assets under management.',
+    highlights: ['Automated static data entry workflows.', 'Automated futures reconciliation processes.'],
   },
 ]

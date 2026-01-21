@@ -7,6 +7,14 @@ defineProps({
     type: Array,
     required: true,
   },
+  title: {
+    type: String,
+    default: 'Experience',
+  },
+  sectionId: {
+    type: String,
+    default: 'experience',
+  },
   delay: {
     type: Number,
     default: 0,
@@ -15,7 +23,7 @@ defineProps({
 </script>
 
 <template>
-  <SectionShell title="Experience" section-id="experience" :delay="delay">
+  <SectionShell :title="title" :section-id="sectionId" :delay="delay">
     <div class="experience-list">
       <ExperienceItem
         v-for="(role, index) in experience"

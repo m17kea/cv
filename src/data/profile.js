@@ -1,6 +1,9 @@
+import headshot from '../assets/headshot.png'
+
 export const profile = {
   name: 'Michael Armitage',
-  title: 'CTO',
-  tagline: 'I have been mad about computers since I played around with DOS on my first Amstrad.',
+  title: '',
+  tagline: '',
   email: 'mike@armitage.cloud',
+  photo: headshot,
 }

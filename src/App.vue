@@ -2,18 +2,19 @@
 import HeroHeader from './components/HeroHeader.vue'
 import AboutSection from './components/AboutSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
-import SkillsSection from './components/SkillsSection.vue'
+import CodexImpactSection from './components/CodexImpactSection.vue'
 import EducationSection from './components/EducationSection.vue'
 import ReferenceNote from './components/ReferenceNote.vue'
-import TargetRole from './components/TargetRole.vue'
 
 import { profile } from './data/profile'
 import { about } from './data/about'
-import { experience } from './data/experience'
-import { skills } from './data/skills'
+import { experience } from './data/experienceIndex'
+import { codexImpact } from './data/codexImpact'
 import { education } from './data/education'
 import { references } from './data/references'
-import { target } from './data/target'
+
+const derivitecExperience = experience.slice(0, 1)
+const priorExperience = experience.slice(1)
 </script>
 
 <template>
@@ -21,17 +22,25 @@ import { target } from './data/target'
     <HeroHeader :profile="profile" :delay="0" />
 
     <main class="layout">
-      <div class="primary">
-        <AboutSection :about="about" :delay="120" />
-        <ExperienceSection :experience="experience" :delay="240" />
-        <EducationSection :education="education" :delay="360" />
-        <ReferenceNote :references="references" :delay="480" />
+      <AboutSection :about="about" :delay="120" />
+
+      <div class="feature-row">
+        <div class="feature-primary">
+          <ExperienceSection :experience="derivitecExperience" :delay="240" />
+        </div>
+        <aside class="feature-sidebar">
+          <CodexImpactSection :codex-impact="codexImpact" :delay="180" />
+        </aside>
       </div>
 
-      <aside class="sidebar">
-        <TargetRole :target="target" :delay="180" />
-        <SkillsSection :skills="skills" :delay="420" />
-      </aside>
+      <ExperienceSection
+        :experience="priorExperience"
+        title="Earlier Experience"
+        section-id="experience-previous"
+        :delay="360"
+      />
+      <EducationSection :education="education" :delay="420" />
+      <ReferenceNote :references="references" :delay="480" />
     </main>
   </div>
 </template>
