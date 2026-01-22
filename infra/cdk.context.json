@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=460804069377:domainName=armitage.cloud:region=eu-west-2": {
+    "Id": "/hostedzone/Z03903463U807PQ45PM8P",
+    "Name": "armitage.cloud."
+  },
+  "hosted-zone:account=460804069377:domainName=armitage.cloud:region=us-east-1": {
+    "Id": "/hostedzone/Z03903463U807PQ45PM8P",
+    "Name": "armitage.cloud."
+  }
+}
