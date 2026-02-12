@@ -23,3 +23,6 @@ npx cdk deploy --profile cc CvSiteStack
 ```bash
 npx cdk deploy --profile cc -c rootDomain=armitage.cloud -c includeWww=false
 ```
+
+`hostedZoneId` is configured in `cdk.json` context and can be overridden with
+`-c hostedZoneId=<zone-id>` when needed.

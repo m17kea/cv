@@ -12,6 +12,7 @@ import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment'
 export interface CvSiteStackProps extends StackProps {
   rootDomain: string
   includeWww?: boolean
+  hostedZoneId: string
   certificateArn: string
 }
 
@@ -25,8 +26,9 @@ export class CvSiteStack extends Stack {
       ? [rootDomain, `www.${rootDomain}`]
       : [rootDomain]
 
-    const zone = route53.HostedZone.fromLookup(this, 'HostedZone', {
-      domainName: rootDomain,
+    const zone = route53.HostedZone.fromHostedZoneAttributes(this, 'HostedZone', {
+      hostedZoneId: props.hostedZoneId,
+      zoneName: rootDomain,
     })
 
     if (!props.certificateArn) {
@@ -45,6 +47,45 @@ export class CvSiteStack extends Stack {
       enforceSSL: true,
     })
 
+    const responseHeadersPolicy = new cloudfront.ResponseHeadersPolicy(
+      this,
+      'NoIndexSecurityHeadersPolicy',
+      {
+        comment:
+          'Security headers plus X-Robots-Tag to prevent indexing while site stays live',
+        customHeadersBehavior: {
+          customHeaders: [
+            {
+              header: 'X-Robots-Tag',
+              value: 'noindex, nofollow, noarchive, nosnippet, noimageindex',
+              override: true,
+            },
+          ],
+        },
+        securityHeadersBehavior: {
+          contentTypeOptions: { override: true },
+          frameOptions: {
+            frameOption: cloudfront.HeadersFrameOption.SAMEORIGIN,
+            override: true,
+          },
+          referrerPolicy: {
+            referrerPolicy:
+              cloudfront.HeadersReferrerPolicy.STRICT_ORIGIN_WHEN_CROSS_ORIGIN,
+            override: true,
+          },
+          strictTransportSecurity: {
+            accessControlMaxAge: Duration.seconds(31536000),
+            override: true,
+          },
+          xssProtection: {
+            protection: true,
+            modeBlock: true,
+            override: true,
+          },
+        },
+      }
+    )
+
     const distribution = new cloudfront.Distribution(
       this,
       'SiteDistribution',
@@ -58,8 +99,7 @@ export class CvSiteStack extends Stack {
             cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
           allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,
           cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
-          responseHeadersPolicy:
-            cloudfront.ResponseHeadersPolicy.SECURITY_HEADERS,
+          responseHeadersPolicy,
         },
         errorResponses: [
           {

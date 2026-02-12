@@ -6,6 +6,7 @@ import * as route53 from 'aws-cdk-lib/aws-route53'
 export interface CvSiteCertStackProps extends StackProps {
   rootDomain: string
   includeWww?: boolean
+  hostedZoneId: string
 }
 
 export class CvSiteCertStack extends Stack {
@@ -20,8 +21,9 @@ export class CvSiteCertStack extends Stack {
       ? [rootDomain, `www.${rootDomain}`]
       : [rootDomain]
 
-    const zone = route53.HostedZone.fromLookup(this, 'HostedZone', {
-      domainName: rootDomain,
+    const zone = route53.HostedZone.fromHostedZoneAttributes(this, 'HostedZone', {
+      hostedZoneId: props.hostedZoneId,
+      zoneName: rootDomain,
     })
 
     const certificate = new acm.Certificate(this, 'SiteCertificate', {

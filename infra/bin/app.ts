@@ -8,8 +8,13 @@ const app = new cdk.App()
 
 const rootDomain = app.node.tryGetContext('rootDomain') ?? 'armitage.cloud'
 const includeWww = (app.node.tryGetContext('includeWww') ?? 'true') !== 'false'
+const hostedZoneId = app.node.tryGetContext('hostedZoneId')
 const account = process.env.CDK_DEFAULT_ACCOUNT
 const region = process.env.CDK_DEFAULT_REGION
+
+if (!hostedZoneId) {
+  throw new Error('hostedZoneId context is required.')
+}
 
 const certStack = new CvSiteCertStack(app, 'CvSiteCertStack', {
   env: {
@@ -18,6 +23,7 @@ const certStack = new CvSiteCertStack(app, 'CvSiteCertStack', {
   },
   rootDomain,
   includeWww,
+  hostedZoneId,
 })
 
 new CvSiteStack(app, 'CvSiteStack', {
@@ -28,5 +34,6 @@ new CvSiteStack(app, 'CvSiteStack', {
   crossRegionReferences: true,
   rootDomain,
   includeWww,
+  hostedZoneId,
   certificateArn: certStack.certificateArn,
 })
