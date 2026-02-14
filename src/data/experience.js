@@ -22,10 +22,12 @@ export const experience = [
       {
         title: 'Product & Technical Execution',
         items: [
-          'Led stakeholder alignment on roadmap priorities and delivery from discovery through production, iterating quickly on feedback.',
-          'Implemented infrastructure-as-code, release quality gates, and production-derived automated testing.',
+          'Defined product strategy from early concept through launch and iteration, balancing client impact, technical feasibility, and delivery speed.',
+          'Built a discovery-to-production operating rhythm with rapid feedback loops, clear quality gates, and predictable delivery.',
+          'Partnered across engineering, research, product, and design to translate complex technical capabilities into usable client workflows and high-value releases.',
+          'Implemented infrastructure-as-code, production-derived automated testing, and release safeguards to increase deployment confidence.',
           'Implemented client-facing reporting with an infinite-scale Druid + AG Grid pivot and lazy loading, enabling responsive custom aggregation on 100k+ row institutional reports.',
-          'Applied Codex to infrastructure automation, CI/CD hardening, and product re-engineering, enabling faster feature rollout and stronger client engagement.',
+          'Applied Codex across product re-engineering, infrastructure automation, and CI/CD hardening, driving a 10x engineering delivery performance gain and faster feature rollout.',
         ],
       },
     ],

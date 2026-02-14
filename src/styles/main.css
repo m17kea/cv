@@ -697,7 +697,7 @@ body {
 
 @media print {
   @page {
-    margin: 6mm;
+    margin: 5mm;
   }
 
   * {
@@ -717,7 +717,7 @@ body {
   .page {
     padding: 0;
     max-width: none;
-    gap: 3px;
+    gap: 2px;
   }
 
   .hero,
@@ -776,7 +776,7 @@ body {
   }
 
   .layout {
-    gap: 3px;
+    gap: 2px;
   }
 
   .feature-row {
@@ -793,11 +793,11 @@ body {
   }
 
   .section-header {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .section-body {
-    gap: 3px;
+    gap: 2px;
   }
 
   #about .stack {
@@ -809,7 +809,7 @@ body {
   }
 
   .experience-list {
-    gap: 4px;
+    gap: 3px;
   }
 
   .experience-item {

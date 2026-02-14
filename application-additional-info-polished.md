@@ -1,0 +1,5 @@
+# Additional Information (Polished)
+
+I’m applying to the Codex PM role because Codex has made me fall in love with building software all over again. In my current role, using Codex has unlocked a new level of creativity and execution: I can turn ideas into shipped improvements far faster, work across parallel threads with confidence, and focus deeply on what matters most in developer workflows. That experience has given me a strong conviction that this is the most important product space in software right now.
+
+I’m especially motivated by the 0-1 nature of this role and the chance to help shape how AI supports real developer work. My background combines hands-on production engineering with product leadership, and I’ve seen firsthand how much impact comes from tight iteration loops between product, engineering, and users. I also care deeply about safe deployment: powerful agentic workflows should be broadly accessible, but with the right guardrails so developers are amplified, not exposed. OpenAI’s mission and values strongly resonate with me, and I can’t think of anything I’d rather work on than helping this team build the future of software development.
