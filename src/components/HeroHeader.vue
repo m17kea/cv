@@ -1,4 +1,6 @@
 <script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+
 defineProps({
   profile: {
     type: Object,
@@ -9,11 +11,45 @@ defineProps({
     default: 0,
   },
 })
+
+const heroRef = ref(null)
+const copyRef = ref(null)
+let resizeObserver = null
+let syncingPhotoSize = false
+
+const syncPhotoSize = () => {
+  if (syncingPhotoSize || !heroRef.value || !copyRef.value) {
+    return
+  }
+  syncingPhotoSize = true
+  const hero = heroRef.value
+  hero.style.setProperty('--hero-photo-size', '0px')
+  const copyHeight = Math.round(copyRef.value.getBoundingClientRect().height)
+  hero.style.setProperty('--hero-photo-size', `${copyHeight}px`)
+  syncingPhotoSize = false
+}
+
+onMounted(() => {
+  syncPhotoSize()
+  resizeObserver = new ResizeObserver(syncPhotoSize)
+  if (copyRef.value) {
+    resizeObserver.observe(copyRef.value)
+  }
+  window.addEventListener('resize', syncPhotoSize)
+})
+
+onBeforeUnmount(() => {
+  if (resizeObserver) {
+    resizeObserver.disconnect()
+    resizeObserver = null
+  }
+  window.removeEventListener('resize', syncPhotoSize)
+})
 </script>
 
 <template>
-  <header class="hero" :style="{ '--delay': `${delay}ms` }">
-    <div class="hero-copy">
+  <header ref="heroRef" class="hero" :style="{ '--delay': `${delay}ms` }">
+    <div ref="copyRef" class="hero-copy">
       <p class="hero-kicker">Curriculum Vitae</p>
       <h1 class="hero-name">{{ profile.name }}</h1>
       <p v-if="profile.title" class="hero-title">{{ profile.title }}</p>
