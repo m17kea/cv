@@ -26,7 +26,7 @@ const priorExperience = experience.slice(1)
 
       <ExperienceSection
         :experience="priorExperience"
-        title=""
+        title="Earlier Experience"
         section-id="experience-previous"
         :delay="360"
       />

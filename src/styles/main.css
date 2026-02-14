@@ -420,10 +420,6 @@ body {
   gap: 12px;
 }
 
-#experience-previous .section-header {
-  display: none;
-}
-
 #experience-previous .experience-list {
   gap: 14px;
 }
@@ -907,11 +903,7 @@ body {
   }
 
   #experience-previous .section-header {
-    margin-bottom: 3px;
-  }
-
-  #experience-previous .section-title {
-    font-size: 0.95rem;
+    display: none;
   }
 
   #experience-previous .section-body {
