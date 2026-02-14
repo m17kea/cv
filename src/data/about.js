@@ -1,9 +1,8 @@
 export const about = {
-  title: 'About',
-  paragraphs: [
-    'I build products by turning messy problems into systems that scale, pairing technical rigor with clear product intent.',
-    'As a CTO, I rebuilt platforms and workflows, aligned stakeholders on roadmap priorities, and delivered measurable gains in reliability, cost, and speed, often as a solo operator in chaotic environments.',
-    'I have hit the ceiling of solo Codex adoption and want to help build the product that unlocks the next order of magnitude.',
-    'I want Codex to distill text, voice, and video into a living, searchable context that drives planning, agentic execution, and concise clarification loops over time.',
+  title: 'Value Proposition',
+  items: [
+    'Turns roadmap priorities into shipped architecture, delivery workflows, and execution.',
+    'Built and scaled institutional financial platforms across early-stage startups and established organizations.',
+    'Hands-on Codex practitioner using structured AI workflows with human feedback loops to improve delivery quality and reliability.',
   ],
 }

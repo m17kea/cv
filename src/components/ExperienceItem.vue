@@ -12,7 +12,7 @@ defineProps({
 <template>
   <article class="experience-item">
     <header class="experience-header">
-      <div>
+      <div class="experience-meta">
         <h3 class="experience-company">{{ role.company }}</h3>
         <p class="experience-title">{{ role.title }} - {{ role.location }}</p>
       </div>
@@ -20,6 +20,17 @@ defineProps({
     </header>
 
     <p v-if="role.overview" class="experience-overview">{{ role.overview }}</p>
+
+    <div v-if="role.sections" class="experience-sections">
+      <section v-for="(section, index) in role.sections" :key="`${section.title}-${index}`">
+        <h4 class="experience-subheading">{{ section.title }}</h4>
+        <ul class="bullet-list">
+          <li v-for="(item, itemIndex) in section.items" :key="`${section.title}-${itemIndex}`">
+            {{ item }}
+          </li>
+        </ul>
+      </section>
+    </div>
 
     <div v-if="role.achievements" class="experience-achievements">
       <p v-if="role.achievementsIntro" class="experience-intro">{{ role.achievementsIntro }}</p>

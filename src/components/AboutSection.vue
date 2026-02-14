@@ -14,8 +14,11 @@ defineProps({
 </script>
 
 <template>
-  <SectionShell title="About" section-id="about" :delay="delay">
-    <div class="stack">
+  <SectionShell :title="about.title ?? 'About'" section-id="about" :delay="delay">
+    <ul v-if="about.items" class="bullet-list">
+      <li v-for="(item, index) in about.items" :key="index">{{ item }}</li>
+    </ul>
+    <div v-else class="stack">
       <p v-for="(paragraph, index) in about.paragraphs" :key="index" class="body-text">
         {{ paragraph }}
       </p>

@@ -159,6 +159,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -306,6 +307,15 @@ body {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.experience-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .experience-company {
@@ -315,15 +325,17 @@ body {
 }
 
 .experience-title {
-  margin: 6px 0 0;
+  margin: 0;
   color: var(--accent);
   font-weight: 600;
 }
 
 .experience-dates {
   margin: 0;
+  margin-left: auto;
   color: var(--muted);
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .experience-overview,
@@ -332,6 +344,24 @@ body {
   margin: 12px 0 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.experience-sections {
+  margin-top: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.experience-subheading {
+  margin: 0;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-strong);
+}
+
+.experience-sections .bullet-list {
+  margin-top: 8px;
 }
 
 .experience-achievements {
@@ -379,6 +409,51 @@ body {
   margin-top: 18px;
   display: grid;
   gap: 16px;
+}
+
+#experience-previous .section-body {
+  gap: 12px;
+}
+
+#experience-previous .section-header {
+  display: none;
+}
+
+#experience-previous .experience-list {
+  gap: 14px;
+}
+
+#experience-previous .experience-item {
+  padding: 16px;
+  border-radius: 12px;
+}
+
+#experience-previous .experience-company {
+  font-size: 1.08rem;
+}
+
+#experience-previous .experience-title {
+  margin-top: 0;
+  font-size: 0.92rem;
+}
+
+#experience-previous .experience-dates {
+  font-size: 0.82rem;
+}
+
+#experience-previous .experience-overview {
+  margin-top: 8px;
+  line-height: 1.45;
+}
+
+#experience-previous .bullet-list {
+  margin-top: 8px;
+  gap: 6px;
+}
+
+#experience-previous .bullet-list li {
+  padding-left: 13px;
+  line-height: 1.35;
 }
 
 .project-block {
@@ -461,7 +536,13 @@ body {
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 8px;
+}
+
+.education-line {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .education-item {
@@ -613,7 +694,7 @@ body {
 
 @media print {
   @page {
-    margin: 9mm;
+    margin: 7mm;
   }
 
   * {
@@ -623,7 +704,7 @@ body {
 
   body {
     background: #ffffff;
-    font-size: 11px;
+    font-size: 10px;
   }
 
   #app::before {
@@ -633,7 +714,7 @@ body {
   .page {
     padding: 0;
     max-width: none;
-    gap: 4px;
+    gap: 3px;
   }
 
   .hero,
@@ -651,36 +732,37 @@ body {
     align-items: stretch;
     justify-content: space-between;
     border-radius: 18px;
-    gap: 6px;
+    gap: 4px;
   }
 
   .hero-copy {
     flex: 1;
-    padding: 9px;
-    gap: 5px;
+    padding: 7px;
+    gap: 4px;
   }
 
   .hero-kicker {
-    font-size: 1rem;
+    font-size: 0.82rem;
   }
 
   .hero-name {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
   }
 
   .hero-title {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .hero-tagline {
-    font-size: 1.02rem;
+    font-size: 0.84rem;
   }
 
   .hero-email {
-    font-size: 1rem;
+    font-size: 0.83rem;
   }
 
   .hero-photo-frame {
+    display: block;
     flex: 0 0 24%;
     width: auto;
     height: auto;
@@ -689,28 +771,28 @@ body {
   }
 
   .layout {
-    gap: 4px;
+    gap: 3px;
   }
 
   .feature-row {
     grid-template-columns: 1.9fr 0.85fr;
-    gap: 4px;
+    gap: 3px;
   }
 
   .section {
-    padding: 9px;
+    padding: 6px;
   }
 
   .section-title {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
   }
 
   .section-header {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
   }
 
   .section-body {
-    gap: 7px;
+    gap: 4px;
   }
 
   #about .stack {
@@ -722,21 +804,29 @@ body {
   }
 
   .experience-list {
-    gap: 9px;
+    gap: 6px;
   }
 
   #experience-previous .experience-list {
-    gap: 18px;
+    gap: 8px;
   }
 
   .experience-item {
-    padding: 9px;
+    padding: 7px;
     border: none;
   }
 
   .codex-card,
   .education-item {
     border: none;
+  }
+
+  .education-list {
+    gap: 3px;
+  }
+
+  .education-line {
+    line-height: 1.25;
   }
 
   .codex-card {
@@ -753,54 +843,110 @@ body {
   }
 
   .experience-company {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
   .experience-title {
-    margin-top: 4px;
-    font-size: 0.92rem;
+    margin-top: 0;
+    font-size: 0.8rem;
   }
 
   .experience-dates {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
   }
 
   .experience-overview,
   .experience-intro,
   .experience-impact {
-    margin-top: 8px;
-    line-height: 1.45;
+    margin-top: 6px;
+    line-height: 1.3;
   }
 
   .experience-achievements {
-    margin-top: 12px;
+    margin-top: 9px;
+  }
+
+  .experience-sections {
+    margin-top: 8px;
+    gap: 6px;
+  }
+
+  .experience-subheading {
+    font-size: 0.68rem;
   }
 
   .detail-list,
   .bullet-list,
   .skills-list {
-    margin-top: 5px;
-    gap: 4px;
+    margin-top: 4px;
+    gap: 2px;
   }
 
   .detail-list li,
   .bullet-list li,
   .skills-list li {
-    padding-left: 12px;
-    line-height: 1.35;
-  }
-
-  #experience-previous {
-    break-before: page;
-    page-break-before: always;
-  }
-
-  #education {
-    break-before: page;
-    page-break-before: always;
+    padding-left: 10px;
+    line-height: 1.2;
   }
 
   .feature-sidebar .section {
     height: auto;
   }
+
+  #references {
+    display: none;
+  }
+
+  #experience-previous.section {
+    padding: 5px;
+  }
+
+  #experience-previous .section-header {
+    margin-bottom: 3px;
+  }
+
+  #experience-previous .section-title {
+    font-size: 0.95rem;
+  }
+
+  #experience-previous .section-body {
+    gap: 2px;
+  }
+
+  #experience-previous .experience-list {
+    gap: 4px;
+  }
+
+  #experience-previous .experience-item {
+    padding: 4px;
+  }
+
+  #experience-previous .experience-company {
+    font-size: 0.82rem;
+  }
+
+  #experience-previous .experience-title {
+    margin-top: 0;
+    font-size: 0.7rem;
+  }
+
+  #experience-previous .experience-dates {
+    font-size: 0.64rem;
+  }
+
+  #experience-previous .experience-overview {
+    margin-top: 3px;
+    line-height: 1.2;
+  }
+
+  #experience-previous .bullet-list {
+    margin-top: 3px;
+    gap: 1px;
+  }
+
+  #experience-previous .bullet-list li {
+    padding-left: 8px;
+    line-height: 1.15;
+  }
+
 }

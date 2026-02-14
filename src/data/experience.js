@@ -2,139 +2,88 @@ export const experience = [
   {
     company: 'Derivitec Ltd',
     location: 'London',
-    title: 'CTO',
-    dateRange: 'January 2017 - Present',
+    title: 'Founding Engineer & Product Lead (later CTO)',
+    dateRange: '2017 - Present',
     overview:
-      'Joined when Derivitec was a two-person startup led by mathematicians, with an unstable product and a manually deployed public EC2 instance. Built the engineering function, shaped the product roadmap with stakeholders, and transformed the platform into a secure, automated, and scalable AWS architecture for near real-time risk and portfolio management.',
-    achievementsIntro:
-      'As CTO, I led a zero-to-one platform rebuild, established modern engineering practices, and delivered measurable gains in scale and reliability, dramatically reducing risk calculation time while keeping cloud spend controlled through platform modernization and Codex-driven optimization.',
-    achievements: [
+      'Joined a two-person fintech startup with an unstable prototype and unclear roadmap, then built it into a secure, scalable production platform for near real-time risk and portfolio management.',
+    sections: [
       {
-        label: 'Secure cloud foundation',
-        detail:
-          'Replaced ad-hoc deployments with infrastructure-as-code, applied AWS Well-Architected security and reliability pillars, and introduced automated, repeatable environments.',
+        title: 'Key Impact',
+        items: [
+          'Supported 400+ users across 20+ institutions, improving decision speed and confidence as real-time risk adoption scaled.',
+          'Re-architected risk computation from a single webserver to a horizontally scaled fan-out architecture, reaching 120 vCPU / 400 GB baseline and 1,500 vCPU / 6 TB peak, while isolating client workloads.',
+          'Processed trillions of risk calculations daily across production workloads.',
+          'Transformed overnight end-of-day risk reporting (up to 30-minute runs) into near real-time risk analysis with live price feeds, enabling real-time trading decisions.',
+          'Replaced poorly safeguarded manual deployments with CI-driven delivery, quality controls, and human approval gates, enabling production deployment in about one hour from code push.',
+          'Delivered 50%+ AWS cost reduction via a three-stage migration: Microsoft to Linux, EC2 to EKS, then Intel to ARM.',
+          'Executed the multi-repo Intel-to-ARM transition in under one week with minimal downtime.',
+        ],
       },
       {
-        label: 'Developer workflows',
-        detail:
-          'Implemented source control, CI/CD, release quality gates, and standardized delivery workflows across teams.',
-      },
-      {
-        label: 'Platform modernization',
-        detail:
-          'Migrated from Windows licensing to cross-platform .NET on Linux, reducing cost and improving portability.',
-      },
-      {
-        label: 'Data layer transformation',
-        detail:
-          'Migrated from SQL Server to Postgres, improved query performance, and strengthened data security and auditing.',
-      },
-      {
-        label: 'Reliable test environments',
-        detail:
-          'Automated test environments from production backups with anonymized identifiers to enable safe, repeatable releases.',
-      },
-      {
-        label: 'Reporting and analytics',
-        detail:
-          'Built live reporting systems, migrated report storage to S3, and orchestrated PnL/VaR calculations via AWS Step Functions.',
-      },
-      {
-        label: 'Agentic acceleration',
-        detail:
-          'Used Codex to shift effort from ad-hoc releases to repeatable automation, deliberately delaying minor features to harden core workflows.',
-      },
-      {
-        label: 'Client integrations',
-        detail:
-          'Led integrations with Bloomberg for live pricing plus Enfusion OMS and Orchestrade to expand client-facing capabilities; later delivered FundStudio, Maia, and Liquidity Book integrations with Codex.',
-      },
-      {
-        label: 'Containerization and scale',
-        detail:
-          'Dockerized services and migrated to Kubernetes using Codex, delivering elastic compute for near real-time risk calculations.',
-      },
-      {
-        label: 'Cost leadership',
-        detail:
-          'Used Codex with the AWS CLI, Cost and Usage Report (CUR) data, and a Git repo to analyze cloud spend, identify 25%+ savings, and implement them over time.',
-      },
-      {
-        label: 'ARM migration',
-        detail:
-          'Used Codex to lead a coordinated multi-repo Intel to ARM migration in under a week, deployed over a weekend with minimal manual intervention.',
+        title: 'Product & Technical Execution',
+        items: [
+          'Led stakeholder alignment on roadmap priorities and delivery from discovery through production, iterating quickly on feedback.',
+          'Implemented infrastructure-as-code, release quality gates, and production-derived automated testing.',
+          'Implemented client-facing reporting with an infinite-scale Druid + AG Grid pivot and lazy loading, enabling responsive custom aggregation on 100k+ row institutional reports.',
+          'Applied Codex to infrastructure automation, CI/CD hardening, and product re-engineering, enabling faster feature rollout and stronger client engagement.',
+        ],
       },
     ],
-    impact:
-      'Impact: Turned a two-person prototype into a secure, scalable risk platform with minutes-to-seconds latency.',
   },
   {
     company: 'Sequel Business Solutions',
     location: 'London',
     title: 'Solutions Architect',
-    dateRange: 'January 2016 - January 2017',
+    dateRange: '2016 - 2017',
     overview:
-      'Verisk Specialty Business Solutions (formerly Sequel Business Solutions) has been a leading industry software specialist for over 25 years, delivering impactful, reliable solutions that provide end-to-end management of insurance and reinsurance operations.',
+      'Led cross-functional stabilization work to improve reliability across insurance software products.',
     highlights: [
-      'Aligned product owners and engineering on a Claims reliability roadmap, improving stability and release confidence.',
-      'Partnered with stakeholders to translate customer feedback into stabilization priorities and release criteria.',
-      'Implemented automated regression coverage to shorten feedback cycles and reduce escaped defects.',
-      'Standardized release workflows to improve predictability and cross-team coordination.',
+      'Led product-engineering alignment on a claims reliability roadmap, improving release confidence.',
+      'Implemented regression automation and standardized release workflows to reduce escaped defects and improve delivery predictability.',
     ],
   },
   {
     company: 'BRT',
     location: 'London',
     title: 'Agile Team Leader',
-    dateRange: 'November 2013 - January 2016',
-    overview:
-      'BRT is a multi-award-winning provider of business process outsourcing and bespoke software solutions for wealth managers, independent asset managers, funds, private banks, and trust companies.',
+    dateRange: '2013 - 2016',
+    overview: 'Led post-acquisition productization of portfolio tooling to support broader client rollout.',
     highlights: [
-      'Productized the Stanhope-built platform post-acquisition and rolled it out to BRT clients.',
-      'Delivered a unified data and reporting platform to improve client visibility and accuracy.',
-      'Designed multi-source data ingestion and normalization to support consistent portfolio reporting.',
-      'Automated operational workflows to reduce manual handoffs and errors.',
-      'Shipped a client-facing portal with shared identity, incorporating user feedback to improve onboarding and self-service.',
+      'Led rollout of the Stanhope-built platform to BRT clients, improving reporting visibility and data accuracy.',
+      'Automated core workflows and delivered a client portal to improve onboarding and self-service.',
     ],
   },
   {
     company: 'Stanhope Capital',
     location: 'London',
     title: 'Senior Developer',
-    dateRange: 'July 2008 - October 2013',
-    overview:
-      'Stanhope Capital is a global investment office providing investment management and advisory services to private clients, charities and endowments. Based in London, Geneva, and Jersey, Stanhope is now one of the largest private investment offices in Europe, overseeing 9.5bn+ in assets.',
+    dateRange: '2008 - 2013',
+    overview: 'Built portfolio management and reporting capabilities that improved control across investment operations.',
     highlights: [
-      'Implemented APX portfolio management to improve investment operations and reporting.',
-      'Built client reporting and MIS views to surface performance insights.',
-      'Delivered reconciliation and transaction loaders to reduce operational exceptions.',
-      'Integrated Bloomberg pricing to improve data accuracy and timeliness.',
-      'Developed a bespoke OMS to align trade workflows with firm processes.',
+      'Implemented APX portfolio management and bespoke OMS capabilities aligned to investment operations.',
+      'Built reconciliation, transaction loading, and Bloomberg pricing integrations to improve data quality and operational reliability.',
     ],
   },
   {
-    company: 'Bluecrest',
+    company: 'BlueCrest',
     location: 'London',
-    title: 'Associate Middle-Office Derivatives',
-    dateRange: 'July 2006 - July 2008',
-    overview:
-      'BlueCrest Capital Management Limited (BCML) is an alternative asset management business based in Jersey, managing significant institutional assets across a number of diversified strategies.',
+    title: 'Associate, Middle-Office Derivatives',
+    dateRange: '2006 - 2008',
+    overview: 'Automated middle-office derivatives processes to reduce operational risk and improve process reliability.',
     highlights: [
-      'Automated reconciliation and fee workflows to reduce operational risk.',
-      'Automated futures and options expiry processing to ensure timely settlement.',
-      'Built electronic blotter and broker confirmation tooling to improve transparency.',
+      'Automated reconciliation, fee workflows, and expiry processing to improve settlement accuracy and reliability.',
+      'Built electronic blotter and broker confirmation tooling to improve trade transparency and control.',
     ],
   },
   {
-    company: 'JP Morgan Asset Management',
+    company: 'J.P. Morgan Asset Management',
     location: 'London',
     title: 'Data Analyst',
-    dateRange: 'January 2005 - July 2006',
-    overview:
-      'J.P. Morgan Asset Management is a leading asset manager for individuals, advisors, and institutions. It is one of the largest asset and wealth managers in the world, with $1.7T in assets under management.',
+    dateRange: '2005 - 2006',
+    overview: 'Improved data operations by automating static data and reconciliation workflows.',
     highlights: [
-      'Automated static data intake to improve data quality and turnaround time.',
-      'Automated futures reconciliation to reduce breaks and manual effort.',
+      'Automated static data intake, improving data quality and turnaround time.',
+      'Automated futures reconciliation to reduce breaks, manual effort, and operational exceptions.',
     ],
   },
 ]
