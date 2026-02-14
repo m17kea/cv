@@ -1,0 +1,3 @@
+interface:
+  display_name: "CV Site Deploy"
+  short_description: "Deploy this CV site to AWS and verify the live URL"
