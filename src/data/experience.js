@@ -33,7 +33,7 @@ export const experience = [
     ],
   },
   {
-    company: 'Sequel Business Solutions',
+    company: 'Verisk Specialty Business Solutions',
     location: 'London',
     title: 'Solutions Architect',
     dateRange: '2016 - 2017',
@@ -45,13 +45,13 @@ export const experience = [
     ],
   },
   {
-    company: 'BRT',
+    company: 'Bedrock RealTime SA',
     location: 'London',
     title: 'Agile Team Leader',
     dateRange: '2013 - 2016',
     overview: 'Led post-acquisition productization of portfolio tooling to support broader client rollout.',
     highlights: [
-      'Led rollout of the Stanhope-built platform to BRT clients, improving reporting visibility and data accuracy.',
+      'Led rollout of the Stanhope-built platform to Bedrock RealTime SA clients, improving reporting visibility and data accuracy.',
       'Automated core workflows and delivered a client portal to improve onboarding and self-service.',
     ],
   },
@@ -67,7 +67,7 @@ export const experience = [
     ],
   },
   {
-    company: 'BlueCrest',
+    company: 'BlueCrest Capital Management',
     location: 'London',
     title: 'Associate, Middle-Office Derivatives',
     dateRange: '2006 - 2008',

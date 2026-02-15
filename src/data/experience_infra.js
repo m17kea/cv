@@ -69,12 +69,12 @@ export const experience = [
       'Impact: Turned a two-person prototype into a secure, scalable risk platform with minutes-to-seconds latency.',
   },
   {
-    company: 'Sequel Business Solutions',
+    company: 'Verisk Specialty Business Solutions',
     location: 'London',
     title: 'Solutions Architect',
     dateRange: 'January 2016 - January 2017',
     overview:
-      'Verisk Specialty Business Solutions (formerly Sequel Business Solutions) has been a leading industry software specialist for over 25 years, delivering impactful, reliable solutions that provide end-to-end management of insurance and reinsurance operations.',
+      'Verisk Specialty Business Solutions has been a leading industry software specialist for over 25 years, delivering impactful, reliable solutions that provide end-to-end management of insurance and reinsurance operations.',
     highlights: [
       'Rebuilt developer workflows across source control, CI/CD, and automated deployments using infrastructure-as-code.',
       'Implemented automated and parallel testing with Selenium regression coverage to accelerate feedback cycles.',
@@ -82,12 +82,12 @@ export const experience = [
     ],
   },
   {
-    company: 'BRT',
+    company: 'Bedrock RealTime SA',
     location: 'London',
     title: 'Agile Team Leader',
     dateRange: 'November 2013 - January 2016',
     overview:
-      'BRT is a multi-award-winning provider of business process outsourcing and bespoke software solutions for wealth managers, independent asset managers, funds, private banks, and trust companies.',
+      'Bedrock RealTime SA is a multi-award-winning provider of business process outsourcing and bespoke software solutions for wealth managers, independent asset managers, funds, private banks, and trust companies.',
     highlights: [
       'Implemented a modern delivery stack for planning, source control, and CI/CD.',
       'Engineered automated ingestion and translation of multi-source custodian data.',
@@ -112,7 +112,7 @@ export const experience = [
     ],
   },
   {
-    company: 'Bluecrest',
+    company: 'BlueCrest Capital Management',
     location: 'London',
     title: 'Associate Middle-Office Derivatives',
     dateRange: 'July 2006 - July 2008',
